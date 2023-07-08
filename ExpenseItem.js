@@ -1,28 +1,28 @@
+
+import ExpenseDate from "./ExpenseDate";
+
 import "./ExpenseItem.css";
 
-function ExpenseItem(props){
+import "./ExpenseDetails"
+import ExpenseDetails from "./ExpenseDetails";
 
-    const expenseDate=new Date(2023,6,6)
-    const expenseTitle="Car Insurance";
-    const expenseLocation ="Location of Expenditure:India"
-    const expenseAmount=3000
+function ExpenseItem(props) {
 
-    return (  <div className="expense-item">
-        <div>{props.date.toISOString()}</div>
-        <div className="expense-item__description">
-            <h2>{props.title}</h2>
+  
 
-            <div>{props.loc} </div>
+  
 
-            <div className="expense-item__price">Rs {props.amount}</div>
+  return (
+    <div className="expense-item">
 
-        </div>
-        
+      <ExpenseDate date={props.date}/>
+     
+
+        <ExpenseDetails title={props.title} loc={props.loc} amount= {props.amount}/>
+
+       
     </div>
-    )
-    
-
-    }
-   
+  );
+}
 
 export default ExpenseItem;
