@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 // import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import ExpenseItem from './components/Expenses/ExpenseItem';
 
-function App() {
+const App=()=> {
   const expenses = [
     {
       id: 'e1',
@@ -11,7 +11,11 @@ function App() {
       date: new Date(2020, 7, 14),
       loc:"Boston"
     },
-    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) ,loc:"Singapore"},
+    { id: 'e2',
+     title: 'New TV',
+      amount: 799.49, 
+      date: new Date(2021, 2, 12) ,
+      loc:"Singapore"},
     {
       id: 'e3',
       title: 'Car Insurance',
